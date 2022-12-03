@@ -17,16 +17,4 @@ class Transaction {
     String tType = isIncome ? "Income" : "Expense";
     return "$tType :\tTitle: $title \tAmount: $amount \tDescription: $description \tCreated at: $createdAt";
   }
-
-  int calculateBalance(List<Transaction> transactions) {
-    int balance = 0;
-    for (int i = 0; i < transactions.length; i++) {
-      print("${i + 1}: " + transactions[i].toString());
-      transactions[i].isIncome
-          ? balance += transactions[i].amount
-          : balance -= transactions[i].amount;
-      print("Balance: $balance");
-    }
-    return balance;
-  }
 }
