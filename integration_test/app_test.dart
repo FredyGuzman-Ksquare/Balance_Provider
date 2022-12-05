@@ -23,7 +23,7 @@ void main() {
 
       await tester.enterText(
           find.byKey(const Key('descTextField')), 'Brand new');
-      final Finder addTaskButton = find.byKey(const Key('addTaskButton'));
+      final Finder addTaskButton = find.byKey(const Key('submitButton'));
       await tester.tap(addTaskButton);
 
       expect(find.text('iPhone 11'), findsOneWidget);
